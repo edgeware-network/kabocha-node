@@ -46,14 +46,14 @@ where
 pub fn development_config(id: ParaId) -> ChainSpec {
 	// Give your base currency a unit name and decimal places
 	let mut properties = sc_chain_spec::Properties::new();
-	properties.insert("tokenSymbol".into(), "UNIT".into());
-	properties.insert("tokenDecimals".into(), 12.into());
+	properties.insert("Kabocha".into(), "KAB".into());
+	properties.insert("tokenDecimals".into(), 18.into());
 
 	ChainSpec::from_genesis(
 		// Name
-		"Development",
+		"Kabocha",
 		// ID
-		"dev",
+		"KAB",
 		ChainType::Local,
 		move || {
 			testnet_genesis(
@@ -85,8 +85,8 @@ pub fn development_config(id: ParaId) -> ChainSpec {
 pub fn local_testnet_config(id: ParaId) -> ChainSpec {
 	// Give your base currency a unit name and decimal places
 	let mut properties = sc_chain_spec::Properties::new();
-	properties.insert("tokenSymbol".into(), "UNIT".into());
-	properties.insert("tokenDecimals".into(), 12.into());
+	properties.insert("Kabocha".into(), "KAB".into());
+	properties.insert("tokenDecimals".into(), 18.into());
 
 	ChainSpec::from_genesis(
 		// Name
