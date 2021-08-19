@@ -8,7 +8,7 @@ services:
           - "9944:9944"
           - "9933:9933"
           - "40333:40333"
-        command: bash -c "./kabocha-node/target/release/parachain-collator --collator --parachain-id 2001 --force-authoring --port 40333 --ws-port 8844 --rpc-cors all -- --execution wasm --chain /specs/rococo-chachacha.json"
+        command: bash -c "curl -0 https://raw.githubusercontent.com/centrifuge/polkadot/chachacha/node/service/res/rococo-chachacha.json -o rococo-chachacha.json && ./kabocha-node/target/release/parachain-collator --collator --parachain-id 2001 --force-authoring --port 40333 --ws-port 8844 --rpc-cors all -- --execution wasm --chain ./rococo-chachacha.json"
         volumes:
           - "kabocha_collator_1:/data"
           - "chachacha_spec:/specs"
